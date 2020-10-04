@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const path = require('path');
+const { resolve } = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
@@ -8,7 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const config = {
   mode: 'production',
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: resolve(__dirname, '../../dist'),
     filename: 'js/[name].bundle.[contentHash].js',
     chunkFilename: 'js/[name].bundle.[chunkHash].js',
     publicPath: '/',

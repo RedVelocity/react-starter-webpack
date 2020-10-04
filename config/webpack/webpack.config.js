@@ -2,9 +2,9 @@
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { merge } = require('webpack-merge');
 // Custom configs
-const commonConfig = require('./webpack/webpack.common');
-const productionConfig = require('./webpack/webpack.prod');
-const developmentConfig = require('./webpack/webpack.dev');
+const commonConfig = require('./webpack.common');
+const productionConfig = require('./webpack.prod');
+const developmentConfig = require('./webpack.dev');
 
 module.exports = ({ env, analyze }) => {
   switch (env) {

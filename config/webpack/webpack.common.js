@@ -1,9 +1,11 @@
 // const webpack = require('webpack');
+const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const config = {
+  context: resolve(__dirname, '../../'),
   entry: ['react-hot-loader/patch', './src/index.js'],
   plugins: [
     new CleanWebpackPlugin(),

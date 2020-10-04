@@ -1,11 +1,11 @@
 // const webpack = require('webpack');
-const path = require('path');
+const { resolve } = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   mode: 'development',
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: resolve(__dirname, '../../dist'),
     filename: 'js/bundle.js',
     publicPath: '/',
   },
