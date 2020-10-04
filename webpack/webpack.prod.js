@@ -54,9 +54,6 @@ const config = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: true,
-            },
           },
           'css-loader',
           'postcss-loader',
