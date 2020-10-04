@@ -1,6 +1,7 @@
 // const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const config = {
   entry: ['react-hot-loader/patch', './src/index.js'],
@@ -9,6 +10,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
+    new ESLintPlugin({ extensions: ['js', 'jsx'], files: './src/' }),
   ],
   module: {
     rules: [
