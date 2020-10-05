@@ -1,16 +1,21 @@
 {
   "name": "react-starter-webpack",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "A starter for React with Webpack, Eslint and Postcss",
+  "keywords": [
+    "react",
+    "webpack",
+    "eslint",
+    "postcss"
+  ],
+  "author": "Shah Nawaz Khan",
+  "license": "MIT",
   "homepage": ".",
   "scripts": {
-    "build-dev": "webpack -d --config ./config/webpack/webpack.config.js --env.env=development",
-    "build": "webpack -p --config ./config/webpack/webpack.config.js --env.env=production",
+    "build-dev": "webpack --config ./config/webpack/webpack.config.js",
+    "build": "webpack --config ./config/webpack/webpack.config.js",
     "build:analyze": "npm run build -- --env.analyze",
-    "start": "webpack-dev-server --config ./config/webpack/webpack.config.js --hot --env.env=development"
+    "start": "webpack-dev-server --config ./config/webpack/webpack.config.js --hot"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
