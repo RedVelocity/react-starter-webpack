@@ -6,8 +6,8 @@ const commonConfig = require('./webpack.common');
 const productionConfig = require('./webpack.prod');
 const developmentConfig = require('./webpack.dev');
 
-module.exports = ({ env, analyze }) => {
-  switch (env) {
+module.exports = () => {
+  switch (process.env.NODE_ENV) {
     case 'development':
       return merge(commonConfig, developmentConfig);
     case 'production':

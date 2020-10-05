@@ -44,23 +44,8 @@ const config = {
       test: /\.(js|jsx|css|html|png|svg|jpg|gif)$/,
       threshold: 10240,
       minRatio: 0.8,
-      deleteOriginalAssets: true,
     }),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          'css-loader',
-          'postcss-loader',
-        ],
-      },
-    ],
-  },
 };
 
 module.exports = config;

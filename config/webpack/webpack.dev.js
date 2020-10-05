@@ -15,23 +15,6 @@ const config = {
       chunkFilename: 'css/[id].css',
     }),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: true,
-            },
-          },
-          'css-loader',
-          'postcss-loader',
-        ],
-      },
-    ],
-  },
   devtool: 'eval-source-map',
   devServer: {
     contentBase: '../dist',
